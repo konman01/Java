@@ -29,5 +29,28 @@ public class GCD {
 		// return valx
 		return gcd;
 	}
+	
+	// Recursive Function to get the GCD of 2 numbers
+	public int getGCDRecursive(int num1, int num2) {
+		
+		// if num1 == num2
+		if(num1 == num2) {
+			
+			// then return num1, which is GCD
+			return num1;
+		}
+		
+		// if num1 > num2
+		if(num1 > num2) {
+			
+			// subtract num1 by num2, and get the GCD
+			return getGCDRecursive(num1 - num2, num2);
+		}
+		
+		// else subtract num2 by num1 and get the GCD
+		return getGCDRecursive(num1, num2-num1);
+		
+		
+	}// end of function
 
 }
