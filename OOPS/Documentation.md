@@ -92,8 +92,17 @@ Whenever we create an instance of subclass, the subclass constructor should call
 
 Why multiple inheritance is not allowed? - If we inherit multiple classes to a subclass, then the object call properies will be inherited twice, this will cause the ambiguity at the subclass, And also we can use only one super() statement in a base class. So we cannot inherit multiple class at the same time. 
 
+## Method Overloading
+
+Definig multiple method with same name and different parameters is known as Method overloading. The parameters should differ is parameter type or in terms of nuber of paramters defined for the method
+
+#### Notes
+* In a class we can overload static method or non static method.
+* The overloading method can be performed either in the same class or we can define the method with same name with different parameter in super class and inherit to subclass. 
+* The method overloading is used to achieve compiler time polymorphism. Whenever overloaded methods are invoked for execution, it will be called based on the arguments. 
 
 
+## Method Overriding
 
 
 
