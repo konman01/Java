@@ -104,6 +104,16 @@ Definig multiple method with same name and different parameters is known as Meth
 
 ## Method Overriding
 
+Inheriting a method from superclass and changing its implementation in subclass according to subclass specification is known as Method Overriding. 
+
+#### Notes
+* To perform inheritance, method overriding is Mandatory.
+* Method overriding is used to achieve run time polymorphism. 
+* Subclass cannot override following methods.
+  *   Static method. Static methods are specific to class and it is not inheritted. So static method cannot be overrided.
+  *   private method - method having the private access specifier are specific to the class and it is not inheritted to subclass. So we cannot override the provate method.
+  *   Final method - Final means we cannot override the value, so Final method cannot be inheritted
+
 
 
 
