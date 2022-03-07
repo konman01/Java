@@ -53,11 +53,11 @@ Defining multiple constructors in a class with different parameters is known as 
 
 ### Composition
 
-If a reference variable of a class type is defined as datamember of a class, then we are aceiving Composition. The reference datamember can be static or Non Static. If the reference member is a static datamember, then it will loaded only once in the memory. If the reference member is a non static data member, then it will be loaded whenever the instance of the class is created.
+If a reference variable of a class type is defined as datamember in a class, then we are aceiving Composition. The reference datamember can be static or Non Static. If the reference member is a static datamember, then it will loaded only once in the memory. If the reference member is a non static data member, then it will be loaded whenever the instance of the class is created.
 
 ### Inheritance
 
-Inheritance is a mechanism where once class inherits the properties of another class. The class from where the properties are inherited is known as superclass or base class. The class which inherits another class is known as child class or subclass.
+Inheritance is a mechanism where one class inherits the properties of another class. The class from where the properties are inherited is known as superclass or base class. The class which inherits another class is known as child class or subclass.
 
 #### Points
 * Subclass can inherit only non static members of a superclass or base class.
@@ -67,9 +67,33 @@ Inheritance is a mechanism where once class inherits the properties of another c
 * If a superclass have non static members having the access specifier as Private, then it cannot be inherited to subclass.
 * Each and every class defined in Java language must have a superclass. If there is no superclass defined by the user, then the compiler define Object class as its super class. 
 
-
 #### Notes
 * Java provides extend keyword to inherit a class.
+
+## this() statement
+
+A constructor of a class can make call to another constructor in the same class using this() statement. this() statement can be used to call Zero Argument constructor or parameterialised constructor.
+
+#### Points
+
+* this statement should be used only inside the constructor and it should be the first statement in the constructor. There should be only one this() statement in the constructor.
+
+
+## Constructor Chaining
+
+Whenever we create an instance of subclass, the subclass constructor should call to it supercall class constructor. The superclass constructor should call its super class constructor. This phenomenon is known as Constructor Chaining. The subclass constructor can make call to its superclass constructor using super() statement. 
+
+#### Points
+
+* The constructor chaining can be done either explicitly or implicitly. If ther supercalss has a Zero Argument constructor, the compiler itself will make call to its superclass constructor from subclass constructor if user has not defined it. If the superclass has only parameterialised constructor, then user should make explit call to form superclass to superclass constructor using super() statement.
+* super() statement should be first statement in the constructor and there should be only one super() statement in the constructor. In a constructor we can call either super() statement or this() statement, we cannot call both.
+
+#### Notes
+
+Why multiple inheritance is not allowed? - If we inherit multiple classes to a subclass, then the object call properies will be inherited twice, this will cause the ambiguity at the subclass, And also we can use only one super() statement in a base class. So we cannot inherit multiple class at the same time. 
+
+
+
 
 
 
