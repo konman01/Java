@@ -80,6 +80,7 @@ A constructor of a class can make call to another constructor in the same class 
 
 
 ## Constructor Chaining
+-------------------------------
 
 Whenever we create an instance of subclass, the subclass constructor should call to it supercall class constructor. The superclass constructor should call its super class constructor. This phenomenon is known as Constructor Chaining. The subclass constructor can make call to its superclass constructor using super() statement. 
 
@@ -93,6 +94,7 @@ Whenever we create an instance of subclass, the subclass constructor should call
 Why multiple inheritance is not allowed? - If we inherit multiple classes to a subclass, then the object call properies will be inherited twice, this will cause the ambiguity at the subclass, And also we can use only one super() statement in a base class. So we cannot inherit multiple class at the same time. 
 
 ## Method Overloading
+-------------------------------
 
 Definig multiple method with same name and different parameters is known as Method overloading. The parameters should differ is parameter type or in terms of nuber of paramters defined for the method
 
@@ -103,6 +105,7 @@ Definig multiple method with same name and different parameters is known as Meth
 
 
 ## Method Overriding
+-------------------------------
 
 Inheriting a method from superclass and changing its implementation in subclass according to subclass specification is known as Method Overriding. 
 
@@ -112,7 +115,23 @@ Inheriting a method from superclass and changing its implementation in subclass 
 * Subclass cannot override following methods.
   *   Static method. Static methods are specific to class and it is not inheritted. So static method cannot be overrided.
   *   private method - method having the private access specifier are specific to the class and it is not inheritted to subclass. So we cannot override the provate method.
-  *   Final method - Final means we cannot override the value, so Final method cannot be inheritted
+  *   Final method - Final means we cannot override the value, so Final method cannot be inheritted.
+
+
+## Class Casting
+-------------------------------
+Casting one type to another class type is known as Class casting. Class casting can be achieve between two class having is a relationship. 
+
+* The instance of the class which has to be casted to another class must have all the properties of that class. Otherwise compiler throws ClassCast Exception.
+* class casting can bo done in 2 ways.
+  * Upcasting
+  * Downcasting
+
+
+
+
+
+
 
 
 
