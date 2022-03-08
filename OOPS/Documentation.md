@@ -129,8 +129,8 @@ Casting one class type to another class type is known as Class casting. Class ca
 * Casting subclass instance to super class type is know as upcasting. Upcasting can be performed from any subclass level to superclass. Upcasting can be performed either implicitly(by compiler) or explicitly. 
 * Casting superclass instance to subclass class type is known as downcasting. The downcasting should be performed explicity. Downcasting can be performed only on the instance which is already upcasted. 
 
-
-
+#### Points
+* If instance has overrided method, when we refer such instance with either superclass reference or subclass reference, we get overrided implementation. (Look for code ClassCasting2.java program).
 
 
 
