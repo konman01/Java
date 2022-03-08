@@ -120,13 +120,14 @@ Inheriting a method from superclass and changing its implementation in subclass 
 
 ## Class Casting
 -------------------------------
-Casting one type to another class type is known as Class casting. Class casting can be achieve between two class having is a relationship. 
+Casting one class type to another class type is known as Class casting. Class casting can be achieve between two class having is a relationship. 
 
 * The instance of the class which has to be casted to another class must have all the properties of that class. Otherwise compiler throws ClassCast Exception.
 * class casting can bo done in 2 ways.
   * Upcasting
   * Downcasting
-
+* Casting subclass instance to super class type is know as upcasting. Upcasting can be performed from any subclass level to superclass. Upcasting can be performed either implicitly(by compiler) or explicitly. 
+* Casting superclass instance to subclass class type is known as downcasting. The downcasting should be performed explicity. Downcasting can be performed only on the instance which is already upcasted. 
 
 
 
