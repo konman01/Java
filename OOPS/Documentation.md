@@ -133,6 +133,21 @@ Casting one class type to another class type is known as Class casting. Class ca
 * If instance has overrided method, when we refer such instance with either superclass reference or subclass reference, we get overrided implementation. (Look for code ClassCasting2.java program).
 
 
+## Polymorphism
+
+Object showing different behaviours at different stages of it lifecycle is known as Polymorphism. There are two types of polymorphism, Compiletime polymorphism and Runtime polymorphism.
+
+* In Compiletime polymorphism, teh method declaration is binded to its implementation at compile time. Since binding is hapenning at compile time, it is called as compiletime polymorphism. Compiletime polymorphism can be achieved by using method overloading. 
+* In Runtime polymorphism, a method declaration is binded to its implementation at the runtime by JVM. Since binding happens at Runtime it is called as Runtime polymorphism. Runtime polymorphism can be achieved by using inheritance, method overriding and Type Casting
+
+## Generalization
+
+While developing a program , if we are referring a subclass instance by its superclass type, then we say the code is developed with generalization. The generalization helps us to achieve maintainable and enhanceable code.
+
+## Abstaction
+
+
+
 
 
 
