@@ -35,10 +35,10 @@ Constructors are members of the class used to initialize the datamembers of the 
 Defining multiple constructors in a class with different parameters is known as Constructor Overloading. The parameters should differ in parameter types or number of parameters passed. Constructor Overloading helpds to initialize the instance of a class in different way.               
 
 #### Points
-* The Constructor name should be same as class name, and should not have any return type
-* Constructors of a class are never inherited and therefore are not subject to hiding or overriding. So constructors cannot be declared as Final
-* When you set a member as static it means: "This method belongs to the class, not to a particular object." But the constructor is implicitly called to initialize an data members of a class(static members cannot use non static members), so we cannot declare constructors as Static members.
-* When you set a method as abstract it means: "This method doesn't have a body and it should be implemented in a child class." But the constructor is called implicitly for instance initialization when the new keyword is used so it can't lack a body. So Constructors cannot be declated as Abstarct
+* The Constructor name should be same as the class name, and should not have any return type
+* Constructors of a class are never inherited and therefore are not subject to hiding or overriding. So constructors cannot be declared as Final and Abstarct
+* When you set a member as static it means: "This method belongs to the class, not to a particular object." But a constructor is implicitly called to initialize  data members of a class(static blocks cannot use non static members), so we cannot declare constructors as Static members.
+* When you set a method as abstract it means: "This method doesn't have a body and it should be implemented in a child class." But the constructor is called implicitly for instance initialization when the new keyword is used so it can't lack a body. So Constructors cannot be declared as Abstarct
 
 
 #### Notes
@@ -53,7 +53,7 @@ Defining multiple constructors in a class with different parameters is known as 
 
 ### Composition
 
-If a reference variable of a class type is defined as datamember in a class, then we are aceiving Composition. The reference datamember can be static or Non Static. If the reference member is a static datamember, then it will loaded only once in the memory. If the reference member is a non static data member, then it will be loaded whenever the instance of the class is created.
+If a reference variable of a class type is defined as datamember in a class, then we are aceiving Composition. The reference datamember can be static or Non Static. If the reference member is a static datamember, then it will loaded only once in the memory. If the reference member is a non static data member, then it will be loaded whenever an instance of the class is created.
 
 ### Inheritance
 
@@ -76,32 +76,32 @@ A constructor of a class can make call to another constructor in the same class 
 
 #### Points
 
-* this statement should be used only inside the constructor and it should be the first statement in the constructor. There should be only one this() statement in the constructor.
+* this statement should be used only inside a constructor and it should be the first statement in the constructor. There should be only one this() statement in a constructor.
 
 
 ## Constructor Chaining
 -------------------------------
 
-Whenever we create an instance of subclass, the subclass constructor should call to it supercall class constructor. The superclass constructor should call its super class constructor. This phenomenon is known as Constructor Chaining. The subclass constructor can make call to its superclass constructor using super() statement. 
+Whenever we create an instance of subclass, the subclass constructor should call to its supercall class constructor. The superclass constructor should call its super class constructor. This phenomenon is known as Constructor Chaining. The subclass constructor can make call to its superclass constructor using super() statement. 
 
 #### Points
 
-* The constructor chaining can be done either explicitly or implicitly. If ther supercalss has a Zero Argument constructor, the compiler itself will make call to its superclass constructor from subclass constructor if user has not defined it. If the superclass has only parameterialised constructor, then user should make explit call to form superclass to superclass constructor using super() statement.
-* super() statement should be first statement in the constructor and there should be only one super() statement in the constructor. In a constructor we can call either super() statement or this() statement, we cannot call both.
+* The constructor chaining can be done either explicitly or implicitly. If the superclass has a Zero Argument constructor, the compiler itself will make call to its superclass constructor from subclass constructor if user has not defined it. If the superclass has only parameterialised constructor, then user should make explit call from  subclass constructor to superclass constructor using super() statement.
+* super() statement should be first statement in a constructor and there should be only one super() statement in a constructor. In a constructor we can call either call super() statement or this() statement, we cannot call both.
 
 #### Notes
 
-Why multiple inheritance is not allowed? - If we inherit multiple classes to a subclass, then the object call properies will be inherited twice, this will cause the ambiguity at the subclass, And also we can use only one super() statement in a base class. So we cannot inherit multiple class at the same time. 
+Why multiple inheritance is not allowed? - If we inherit multiple classes to a subclass, then the object class properies will be inherited twice, this will cause the ambiguity at the subclass, And also we can use only one super() statement in a subclass. So we cannot inherit multiple class at the same time. 
 
 ## Method Overloading
 -------------------------------
 
-Definig multiple method with same name and different parameters is known as Method overloading. The parameters should differ is parameter type or in terms of nuber of paramters defined for the method
+Definig multiple methods with same name and different parameters is known as Method overloading. The parameters should differ in parameter type or in terms of number of parameters defined for the method
 
 #### Notes
 * In a class we can overload static method or non static method.
 * The overloading method can be performed either in the same class or we can define the method with same name with different parameter in super class and inherit to subclass. 
-* The method overloading is used to achieve compiler time polymorphism. Whenever overloaded methods are invoked for execution, it will be called based on the arguments. 
+* The method overloading is used to achieve compile time polymorphism. Whenever overloaded methods are invoked for execution, it will be called based on the arguments. 
 
 
 ## Method Overriding
@@ -114,7 +114,7 @@ Inheriting a method from superclass and changing its implementation in subclass 
 * Method overriding is used to achieve run time polymorphism. 
 * Subclass cannot override following methods.
   *   Static method. Static methods are specific to class and it is not inheritted. So static method cannot be overrided.
-  *   private method - method having the private access specifier are specific to the class and it is not inheritted to subclass. So we cannot override the provate method.
+  *   private method - method having the private access specifier are specific to the class and it is not inheritted to subclass. So we cannot override the private methods.
   *   Final method - Final means we cannot override the value, so Final method cannot be inheritted.
 
 
@@ -123,7 +123,7 @@ Inheriting a method from superclass and changing its implementation in subclass 
 Casting one class type to another class type is known as Class casting. Class casting can be achieve between two class having is a relationship. 
 
 * The instance of the class which has to be casted to another class must have all the properties of that class. Otherwise compiler throws ClassCast Exception.
-* class casting can bo done in 2 ways.
+* class casting can boe done in 2 ways.
   * Upcasting
   * Downcasting
 * Casting subclass instance to super class type is know as upcasting. Upcasting can be performed from any subclass level to superclass. Upcasting can be performed either implicitly(by compiler) or explicitly. 
