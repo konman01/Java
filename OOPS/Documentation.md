@@ -144,7 +144,15 @@ Object showing different behaviours at different stages of it lifecycle is known
 
 While developing a program , if we are referring a subclass instance by its superclass type, then we say the code is developed with generalization. The generalization helps us to achieve maintainable and enhanceable code.
 
-## Abstaction
+## Abstract Class
+
+Defining a method without a body is known as Abstact method. Abstact methods do not specify method body and it should be declared with abstract keyword. Abstact method should be developed in a abstact class. A class declared with abstact keyword is known as Abstact class.
+
+#### Points
+* You cannot make static metod as Abstact because static methods are specific to class and cannot be inherited to subclass for overriding. 
+* An Abstact class can have concrete methods only, Abstact methods only or both.
+* If a class is defined as Abstact it is not mandatory to have the abstact methods in the class, but any class having abstact must be declared as abstarct 
+* 
 
 
 
