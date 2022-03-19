@@ -152,7 +152,8 @@ Defining a method without a body is known as Abstact method. Abstact methods do 
 * You cannot make static metod as Abstact because static methods are specific to class and cannot be inherited to subclass for overriding. 
 * An Abstact class can have concrete methods only, Abstact methods only or both.
 * If a class is defined as Abstact it is not mandatory to have the abstact methods in the class, but any class having abstact must be declared as abstarct 
-* 
+* When a class inherits an abstact class, the subclass should define the methods for all the inherited abstact methods. Otherwise the subclass should be as Abstact.
+* We can not create instance of abstact class.
 
 
 
