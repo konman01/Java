@@ -1,5 +1,7 @@
 # OOPS Documentation
 
+Object-Oriented Programming is a paradigm that provides many concepts, such as inheritance, data binding, polymorphism
+
 ## Class
 -----------
 
@@ -168,6 +170,26 @@ The interface methods should be implemented by a class. A class which implements
 * By Interface, we can support functionality of Multiple inheritance.
 * First of all Interfaces are used to specify common methods for a set of unrelated classes for which every class will have a unique implementation. Therefore it is not possible to specify the access modifier as private since it cannot be accessed by other classes to be overridden. Interface might be implemented (realized) by different unrelated classes which are not in the same package therefore protected access modifier is not valid as well.
 * If method type is interface type, then to such method we can pass an instance of any implementation class of the interface. If the method return type is interface type, then such methods can return any instance of the implementation class of that interface.
+
+## Abstraction
+
+Hiding implementation from its utilization is known as Abstraction. To achieve abstaction we have to follow below steps.
+ 1. Generalize all the functionalities in an interface
+ 2. provide specific implmentation in an implementation class.
+ 3. Refer implementation class instances using the interface type
+
+
+## Encalpsulation
+
+Encapsulation is one of the OOPs principle which defines the acess level of members of a class. We can define the restrictions on the class members by using access specifiers. 
+
+#### Points
+
+* Private: The access level of a private modifier is only within the class. It cannot be accessed from outside the class.
+* Default: The access level of a default modifier is only within the package. It cannot be accessed from outside the package. If you do not specify any access level, it will be the default.
+* Protected: The access level of a protected modifier is within the package and outside the package through child class. If you do not make the child class, it cannot be accessed from outside the package.
+* Public: The access level of a public modifier is everywhere. It can be accessed from within the class, outside the class, within the package and outside the package.
+
 
 
 
