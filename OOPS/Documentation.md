@@ -156,6 +156,19 @@ Defining a method without a body is known as Abstact method. Abstact methods do 
 * We can not create instance of abstact class.
 
 
+## Interface
+
+Inteface is a pure abstact class body where we can define only abstact methods. Interface methods by default are abstact methods and they have public access. Interface variables by default are static, final and they will be having public access.  
+
+The interface methods should be implemented by a class. A class which implements an interface is known as implementation class. A class can implements any number of abstact methods from the interface. If a class is not providing implementation to all the methods in an interface, then the implementation class should be declared as Abstact class. 
+
+#### Points
+
+* We cannot create instance of an interfaces
+* By Interface, we can support functionality of Multiple inheritance.
+* First of all Interfaces are used to specify common methods for a set of unrelated classes for which every class will have a unique implementation. Therefore it is not possible to specify the access modifier as private since it cannot be accessed by other classes to be overridden. Interface might be implemented (realized) by different unrelated classes which are not in the same package therefore protected access modifier is not valid as well.
+* If method type is interface type, then to such method we can pass an instance of any implementation class of the interface. If the method return type is interface type, then such methods can return any instance of the implementation class of that interface.
+
 
 
 
