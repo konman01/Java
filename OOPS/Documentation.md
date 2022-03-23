@@ -181,14 +181,23 @@ Hiding implementation from its utilization is known as Abstraction. To achieve a
 
 ## Encalpsulation
 
-Encapsulation is one of the OOPs principle which defines the acess level of members of a class. We can define the restrictions on the class members by using access specifiers. 
+Encapsulation is one of the OOPs principle which defines the acess level for the members of a class. We can define the restrictions on the class members by using access specifiers. 
 
 #### Points
 
 * Private: The access level of a private modifier is only within the class. It cannot be accessed from outside the class.
-* Default: The access level of a default modifier is only within the package. It cannot be accessed from outside the package. If you do not specify any access level, it will be the default.
+* Default(Package Level): The access level of a default modifier is only within the package. It cannot be accessed from outside the package. If you do not specify any access level, it will be the default.
 * Protected: The access level of a protected modifier is within the package and outside the package through child class. If you do not make the child class, it cannot be accessed from outside the package.
 * Public: The access level of a public modifier is everywhere. It can be accessed from within the class, outside the class, within the package and outside the package.
+
+#### Points
+
+* The default access of members of a class is Package level, where as default access level of members of interface are public.
+* A constructor can have any of the 4 access. If the constructor is declared as private, then interface creation is restrivted to the clkass body, and we cannot create instance anywhere else. This is used to create Singletone class.
+* The constrctor defined by the compiler will have the access same as that of the class. The user defined constructor can have any of the 4 access. 
+* While overrding, subclass has 
+* permission to change the access of the inherited method. The subclass should retain the same access level or it should increate the accesss level but cannot decreare the access level.
+* When a class provides implementation to interface methods, that class should retain the public access otherwise the compiler throws exception
 
 
 
