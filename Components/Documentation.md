@@ -43,6 +43,18 @@ default toString() method provides memory address of the object. This method can
 | we use final keyword along with the literals or function members of a class. If a data member is declared as final, then it cannot be ovverided. If a function is declared as final, then the function defination cannot be overrided in sublass | Finally block is used to execute a set of statement after executing the try catch block. It is used to close heavy resourses such as files, DB connection ett if exception is thrown or not in an application | finalize() is a method called by the garbage collector when it determines no more references to the object exist|
 
 
+### Difference between ArrayList and LinkedList?
+
+| ArrayList | LinkedList|
+|-----------|-----------|
+| ArrayList internally uses dynamic array to store elements | Linked List internally used double linked list to store elelents |
+| Memory allocation for ArrayList is continuous | Memory Allocation for LinkedList is Random |
+| Manipulation of ArrayList such as adding element in between the arraylist or removing the element inbetween the array list is slow, since the other elements are requited to be shifter after the manipulation | LinkedList manipulation is faster compared to ArrayList as it internally uses the linkedlist to manage data |
+| ArrayList can act only as List as it provides implementation to only List Interface | LinkedList provides implementation to List as well as Queue interface, so it can be used as List and Queue |
+| ArrayList is best for storing and accessing the data | LinkedList is best for manipulating the data |
+
+
+
 
 
 
