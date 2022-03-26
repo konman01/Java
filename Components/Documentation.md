@@ -7,6 +7,10 @@ JRE is set of software which is used provide runtime environment for Java Applic
 
 JDK is software development environment which is used to develop Java application. JDK contains JRE + development tools. JDK is implementation of Java platforms released by Oracle such as Standard Edition Java Platform, Enterprise Edition Java platform and Micro Edition Java Platform. 
 
+### What are the difference between Abstract Class and Interface?
+|Abstract Class|Interface|
+---------------------------
+
 
 
 
