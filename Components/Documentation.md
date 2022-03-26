@@ -7,7 +7,7 @@ JRE is set of software which is used provide runtime environment for Java Applic
 
 JDK is software development environment which is used to develop Java application. JDK contains JRE + development tools. JDK is implementation of Java platforms released by Oracle such as Standard Edition Java Platform, Enterprise Edition Java platform and Micro Edition Java Platform. 
 
-### What are the difference between Abstract Class and Interface?
+### What are the differences between Abstract Class and Interface?
 |Abstract Class|Interface|
 |--------------|---------|
 | Methods in the Abstract class can be a method having the implmentation or Abstarct Method | All the methods defined in an Interface are Abstarct Method |
@@ -16,6 +16,31 @@ JDK is software development environment which is used to develop Java applicatio
 | Abstract classes will have Constructors | Interfaces does not have Constructors |
 | The data members can have any access specifiers | The data members in a class by default static final and public.|
 
+### Why multiple inheritance is not supported in Java?
+
+Every class in Java by default inherits Object class. If a class inherits 2 classes, then the object class properties will be inherited twice which cause ambuiguity at child class, And also we will be able to use only one super() statement in Java for constructor binding, so multiple inheritance is not possible.
+
+### What are Object class methods?
+
+Every class in Java by default inherits Object class. Object class consists for functions such as equals(), finalize(), hashcode() and toString() functions. These functions are allowed to get overrided in subclasses. Object class also contains thread functionality specific functions such as notify(), notifyAll() and wait(). These functions as not allowed to get overrided in subclass. 
+
+equals() methods by default compares the memry address of 2 objects. In classed sunch as String, StringBuilder etc, the equal() method of Object class is overridden to compare the String value. 
+
+hashcode() method by default provided the memory address in hexadecimal format. By definition, if two objects are equal, their hash code must also be equal. If you override the equals() method, you change the way two objects are equated and Object's implementation of hashCode() is no longer valid. Therefore, if you override the equals() method, you must also override the hashCode() method as well.
+
+finalize() method is called by the garbage collector when it determines no more references to the object exist.the Object finalize method performs no actions but it may be overridden by any class, normally it should be overridden to clean-up non-Java resources ie closing a file etc. 
+
+default toString() method provides memory address of the object. This method can be overrided in the sublass to get the String representation of object.
+
+### What are Generics?
+
+ Generics are used to define the type of object we can store in a collection. Before Java 1.5, we were able to store data of any types in Collection.
+ 
+### What are the difference between Final, Finally and finalize()?
+
+|Final|Finally|Finalize|
+|-----|-------|--------|
+| we use final keyword along with the literals or function members of a class. If a data member is declared as final, then it cannot be ovverided. If a function is declared as final, then the function defination cannot be overrided in sublass | Finally block is used to execute a set of statement after executing the try catch block. It is used to close heavy resourses such as files, DB connection ett if exception is thrown or not in an application | finalize() is a method called by the garbage collector when it determines no more references to the object exist|
 
 
 
