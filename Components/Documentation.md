@@ -54,6 +54,21 @@ default toString() method provides memory address of the object. This method can
 | ArrayList is best for storing and accessing the data | LinkedList is best for manipulating the data |
 
 
+### What are the difference between Comparator and Comparable?
+
+### Whar are the difference between Vector and ArrayList?
+
+### How to create thread in Java?
+We can create threads in Java by 2 mettods, by inheriting the Thread class and overriding the run() method, and by implementing Ruunable interface and providing implementation for run() method. We want to inherit other class, then we have to use the Runnable interface since Java does not support multiple inheritance.
+
+
+### What is Syncronization?
+
+If there are multiple threads executing on same resourse, then it might corrupt the resourse. To aviod this we can define a block or function as syncronized so that only once thread will be allowed at a time. When a thread start to execute the Syncronised block, then the block will be locked for other threads and will be released once the tread completes its execution.
+
+
+
+
 
 
 
