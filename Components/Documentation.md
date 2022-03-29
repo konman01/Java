@@ -64,7 +64,9 @@ We can create threads in Java by 2 mettods, by inheriting the Thread class and o
 
 ### What is Syncronization?
 
-If there are multiple threads executing on same resourse, then it might corrupt the resourse. To aviod this we can define a block or function as syncronized so that only once thread will be allowed at a time. When a thread start to execute the Syncronised block, then the block will be locked for other threads and will be released once the tread completes its execution.
+If there are multiple threads executing on same resource, then it might corrupt the resource. To aviod this we can define a block or function as syncronized so that only once thread will be allowed at a time. When a thread start to execute the Syncronised block, then the block will be locked for other threads and will be released once the tread completes its execution.
+
+If syncronised ketword is used for a method or a block, then it will be locked and executed by only one thread. Only when the thread compltes its execution, then only other thread can execute it.
 
 ### What is the difference between class level lock and object level lock?
 
@@ -140,7 +142,14 @@ public class DemoClass
 Object level lock and Class level locks are different. In above case, T2 can run method m2 by obtaining object level lock. But if m2 is static synchronized, T2 can't invoke m2 method unless T1 release class level lock on method m1.
 
 
+### How threads communicates?
 
+Thread communicates using wait() and notify() functions. wait() function releases lock on the resource by a thread and transfer it into other thread. Once the other thread uses the resources it should notify() the original thread to continue.
+
+
+### What are Java8 features?
+
+Lambda Expressions, Functional interface, default methods, functions, predicates and Stream Api
 
 
 
