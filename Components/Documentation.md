@@ -168,3 +168,98 @@ Lambda Expressions, Functional interface, default methods, functions, predicates
 
 Lambda expression provides clear and concise way to represent method defination using expression. The Lambda expression is used to provide the implementation of an interface which has functional interface. It saves a lot of code. In case of lambda expression, we don't need to define the method again for providing the implementation. Here, we just write the implementation code.
 
+Implementation of Functional Interface by Annonymous Class
+```
+
+package com.konman01.lambdatest;
+
+// Functional Interface
+interface Drawable {
+	
+	void draw();
+	
+}
+
+// Without Using the Lamda Function
+public class LambdaExpressionExample1 {
+	
+	public static void main(String[] args) {
+		
+		
+		// Drawable implementation using Annonymous Class
+		Drawable drawable = new Drawable() {
+			
+			@Override
+			public void draw() {
+				System.out.println("Drwaing by Manjunatha");
+				
+			}
+		};
+		
+		drawable.draw();
+		
+		
+	}
+
+}
+```
+Implementation Using Lambda Expression(No Argument Function in Functional Interface)
+
+```
+
+package com.konman01.lambdatest;
+
+interface Drawable1{
+	
+	void draw();
+}
+
+public class LambdaExpressionExample2 {
+	
+	public static void main(String[] args) {
+		
+		// Drawable1 is being implemented by Lamda Expression
+		Drawable1 draw	= ()->{
+			
+			System.out.println("Drawing by Manjunatha!!");
+			
+		};
+		
+		draw.draw();
+		
+		
+	}
+
+}
+
+```
+
+Implementation Using Lambda Expression(Function interface having parameter)
+
+```
+package com.konman01.lambdatest;
+
+
+interface Sayable{
+	
+	String say(String name);
+}
+
+public class LambdaExpressionExample3 {
+	
+	public static void main(String[] args) {
+		
+		// Implementation using Lamda Expression
+		Sayable sayable = (name)->{
+			
+			return "Hello, "+name+"!, I have nothing to Say";
+		};
+		
+		System.out.println(sayable.say("Manjunatha"));
+		
+		
+	}
+
+}
+
+```
