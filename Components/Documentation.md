@@ -361,3 +361,49 @@ public class PredicateExample1 {
 
 }
 ```
+
+### What are predicate Joins?
+
+Predicate join allows us to use more than one Predicate together, or to negate the result of predicate. 
+
+```
+package com.konman01.predicatesTest;
+import java.util.Iterator;
+import java.util.function.Predicate;
+
+public class PredicateJoinExample1 {
+	
+	public static void main(String[] args) {
+		
+		int[] arr = {2, 13, 4, 6, 8, 2, 1, -1, 0};
+		
+		Predicate<Integer> greaterThan10Predicate = i->i > 10;
+		Predicate<Integer> evenPredicate = i-> i % 2==0;
+		
+		method(greaterThan10Predicate, arr);
+		
+		method(evenPredicate, arr);
+		
+		method(greaterThan10Predicate.negate(), arr);
+		
+		method(evenPredicate.or(greaterThan10Predicate), arr);
+		
+		method(evenPredicate.and(greaterThan10Predicate), arr);
+		
+	}
+	
+	public static void method(Predicate<Integer> predicate, int[] arr) {
+		
+		for (int val: arr) {
+			System.out.println("val:"+val);
+			System.out.println("result:"+predicate.test(val));
+		}
+		
+		System.out.println("----------------------------------------");
+		
+		return;
+	}
+
+}
+
+```
