@@ -271,4 +271,93 @@ public class LambdaExpressionExample3 {
 
 ### What are Functional Interfaces?
 
-An Interface that contains exactly one abstract method is known as functional interface. It can have any number of default, static methods but can contain only one abstract method. It can also declare methods of object class.
+An Interface that contains exactly one abstract method is known as functional interface. It can have any number of default, static methods but can contain only one abstract method. It can also declare methods of object class. Example for function interfaces are Runnable interface with run function, Comparable interface with compareTo() function
+
+```
+
+package com.konman01.functionalinterfacetest;
+
+interface Hello{
+	
+	// Functional Interface Should contain only one Abstarct Method
+	String sayHello(String name);
+	
+	
+	// It can contain the functions from Object Class
+    String toString();  
+    boolean equals(Object obj);  
+    
+    // Can contain any number of Default Method 
+    default void greet() {
+    	System.out.println("Hello Everyone");
+    }
+    
+    default void wish() {
+    	System.out.println("Have wonderful day!!!");
+    }
+    
+    // can contain any number od Static Methods
+    static void bye() {
+    	System.out.println("Bye, Bye!!!!!");
+    }
+    
+    static void goodNight() {
+    	System.out.println("Good Night!!!");
+    }
+	
+}
+
+public class FunctionInterfaceExample1 {
+	
+	
+	public static void main(String[] args) {
+		
+		Hello hello = (String name)->{
+			return "Hello,"+name;
+		};
+		
+		System.out.println(hello);
+		
+		System.out.println(hello.sayHello("Manjunatha"));
+		
+		hello.greet();
+	}
+
+}
+
+
+```
+
+### What is Predicate?
+
+Predicate is a Functional Interface. It conatins a function by name test(), which as one argument and returns the boolean value. 
+
+```
+package com.konman01.predicatesTest;
+import java.util.function.Predicate;
+
+
+public class PredicateExample1 {
+	
+	public static void main(String[] args) {
+		
+		// Predicate to Test if the number is greater than 20
+		Predicate<Integer> predicate = (i)->{
+			return i > 20;
+		};
+		
+		// Predicate to check if the length of the String is greater than 5 Chracter
+		Predicate<String> predicateStr = (str)->{
+			return str.length() > 5;
+		};
+		
+		System.out.println(predicate.test(25));// true
+		
+		System.out.println(predicate.test(-1));// false
+		
+		System.out.println(predicateStr.test("Manjunatha"));// true
+		
+	}
+
+}
+```
