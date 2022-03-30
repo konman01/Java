@@ -74,13 +74,15 @@ If syncronised ketword is used for a method or a block, then it will be locked a
 
 Object level locking is mechanism when you want to synchronize a non-static method or non-static code block such that only one thread will be able to execute the code block on given instance of the class. This should always be done to make instance level data thread safe. This can be done as below :
 
+```
 public class DemoClass 
 { 
   public synchronized void demoMethod(){} 
 } 
-
+```
 or 
 
+```
 public class DemoClass 
 { 
   public void demoMethod(){ 
@@ -91,8 +93,11 @@ public class DemoClass
  } 
 } 
 
+```
+
 or 
 
+```
 public class DemoClass 
 { 
   private final Object lock = new Object(); 
@@ -103,17 +108,22 @@ public class DemoClass
  } 
 } 
 
+```
+
 #### Class level lock
 
 Class level locking prevents multiple threads to enter in synchronized block in any of all available instances on runtime. This means if in runtime there are 100 instances of DemoClass, then only one thread will be able to execute demoMethod() in any one of instance at a time, and all other instances will be locked for other threads. This should always be done to make static data thread safe.
 
+```
 public class DemoClass 
 { 
   public synchronized static void demoMethod(){} 
 } 
 
+```
 or 
 
+```
 public class DemoClass 
 { 
   public void demoMethod(){ 
@@ -124,8 +134,10 @@ public class DemoClass
  } 
 } 
 
+```
 or 
 
+```
 public class DemoClass 
 { 
  private final static Object lock = new Object(); 
@@ -136,6 +148,7 @@ public class DemoClass
   } 
  } 
 }
+```
 
 ### If a thread T1 enters a method m1 by obtaining the class level lock, does this mean another thread T2 cannot run a different method m2 by obtaining the object level lock?
 
@@ -144,8 +157,7 @@ Object level lock and Class level locks are different. In above case, T2 can run
 
 ### How threads communicates?
 
-Thread communicates using wait() and notify() functions. wait() function releases lock on the resource by a thread and transfer it into other thread. Once the other thread uses the resources it should notify() the original thread to continue.
-
+Thread communicates using wait() and notify() functions. wait() function releases lock on the resource by a thread and transfer it into other thread. Once the other thread uses the resources it should call notify() or notifyall() function to notify the waiting thread to continue.
 
 ### What are Java8 features?
 
