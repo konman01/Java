@@ -164,9 +164,11 @@ Thread communicates using wait() and notify() functions. wait() function release
 Lambda Expressions, Functional interface, default methods, functions, predicates and Stream Api
 
 
+
+
 ### What is Java Lambda Expression?
 
-Lambda expression provides clear and concise way to represent method defination using expression. The Lambda expression is used to provide the implementation of an interface which has functional interface. It saves a lot of code. In case of lambda expression, we don't need to define the method again for providing the implementation. Here, we just write the implementation code.
+Lambda Expressions are like annonymous function or closure where we dont define function name, return type and access specifier. Lambda expression provides clear and concise way to represent method defination using expression. The Lambda expression is used to provide the implementation of an interface which has functional interface. It saves a lot of code. In case of lambda expression, we don't need to define the method again for providing the implementation. Here, we just write the implementation code.
 
 Implementation of Functional Interface by Annonymous Class
 ```
@@ -263,3 +265,10 @@ public class LambdaExpressionExample3 {
 }
 
 ```
+
+
+
+
+### What are Functional Interfaces?
+
+An Interface that contains exactly one abstract method is known as functional interface. It can have any number of default, static methods but can contain only one abstract method. It can also declare methods of object class.
