@@ -489,3 +489,42 @@ public class InterfaceStaticMethod1 implements Wish{
 }
 
 ```
+
+### Can a class implement 2 interfaces having same default method?
+
+Yes, A class implement 2 interfaces having same method but the implementation class should override the default method.
+
+```
+package com.konman01.defaultmethodtest;
+
+interface Test1{
+	
+	default void run() {
+		System.out.println("Executing run in Test1!!!");
+	}
+}
+
+interface Test2{
+	
+	default void run() {
+		System.out.println("Executing run in Test2!!!");
+	}
+	
+}
+
+public class DefaultMethodExample2 implements Test1, Test2{
+
+	@Override
+	public void run() {
+		System.out.println("Executing run in DefaultMethodExample2");
+	}
+	
+	
+	public static void main(String[] args) {
+		DefaultMethodExample2 obj = new DefaultMethodExample2();
+		obj.run();// Executing run in DefaultMethodExample2
+	}
+
+}
+
+```
