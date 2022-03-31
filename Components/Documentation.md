@@ -407,3 +407,8 @@ public class PredicateJoinExample1 {
 }
 
 ```
+
+
+### What are default methods in interface?
+
+Methods which are defined inside the interface and tagged with default are known as default methods. These methods are non-abstract methods.If we have an interface and that interface is being implemented by multiple classes, then all the classes should provide implementation for the abstarct methods in the interface. In future, If we add more abstract methods in the interface, then we need to modify all the implementation class to provide defination for abstarct method. We use the default methods in interface to provide default implementation for the abstact methods
