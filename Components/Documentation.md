@@ -411,4 +411,44 @@ public class PredicateJoinExample1 {
 
 ### What are default methods in interface?
 
-Methods which are defined inside the interface and tagged with default are known as default methods. These methods are non-abstract methods.If we have an interface and that interface is being implemented by multiple classes, then all the classes should provide implementation for the abstarct methods in the interface. In future, If we add more abstract methods in the interface, then we need to modify all the implementation class to provide defination for abstarct method. We use the default methods in interface to provide default implementation for the abstact methods
+Methods which are defined inside the interface and tagged with default are known as default methods. These methods are non-abstract methods.If we have an interface and that interface is being implemented by multiple classes, then all the classes should provide implementation for the abstarct methods in the interface. In future, If we add more abstract methods in the interface, then we need to modify all the implementation class to provide defination for abstarct method. We use the default methods in interface to provide default implementation for the abstact methods.
+
+```
+package com.konman01.defaultmethodtest;
+
+interface Greet{
+	// Defining Default Method
+	default void sayHello() {
+		System.out.println("Hello, good morning");
+	}
+	
+	// Abstarct Method
+	void sayBye();
+}
+
+// Implementation class
+public class DefaultMethodExample1 implements Greet{
+
+	// Providing the implementation to abstarct method
+	@Override
+	public void sayBye() {
+		
+		System.out.println("Bye!!!!");
+		
+	}
+	
+	// Main method
+	public static void main(String[] args) {
+		
+		DefaultMethodExample1 obj = new DefaultMethodExample1();
+		obj.sayBye();
+		obj.sayHello();
+		
+	}
+	
+	
+}// End of class
+
+```
+
+
