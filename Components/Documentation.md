@@ -451,4 +451,41 @@ public class DefaultMethodExample1 implements Greet{
 
 ```
 
+### Can we define static method in an Interface?
 
+We can define static methods inside the interface. Static methods are used to define utility methods.
+
+```
+
+package com.konman01.interfacestatictest;
+
+interface Wish{
+	
+	// Static method in interface
+	static void Wish() {
+		System.out.println("Have a great Day!!!");
+	}
+	
+	// Abstract method in an Interface
+	void bless();
+	
+}
+
+public class InterfaceStaticMethod1 implements Wish{
+
+	@Override
+	public void bless() {
+		System.out.println("God Bless You");
+		
+	}
+	
+	public static void main(String[] args) {
+		
+		// Calling Static Method from interface
+		Wish.Wish();
+		
+	}
+
+}
+
+```
