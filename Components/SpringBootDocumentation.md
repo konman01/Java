@@ -12,3 +12,6 @@ It is an approch of outsourcing the construction and management of objects.
 
 ### What is Dependency Injection?
 
+Dependency Injection in a practice where we create objects saperately and injects its dependency during runtime instead of constructing them constructing them internally.
+
+
