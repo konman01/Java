@@ -76,6 +76,7 @@ public class BaseBallCoach implements Coach {
 	private FortuneService fortuneService;
 	
 	public BaseBallCoach(FortuneService theFortuneService) {
+		System.out.println("BaseBall Constructor call");
 		fortuneService = theFortuneService;
 	}
 	
@@ -121,4 +122,12 @@ public class HelloSpringApp {
 
 }
 
+```
+
+### Output
+
+```
+BaseBall Constructor call
+Run 2k
+Today is your lucky Day
 ```
