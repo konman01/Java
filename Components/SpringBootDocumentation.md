@@ -18,4 +18,6 @@ For example we have a Coach Class and for the Coach class we have defined CoachD
 
 The Dependency Injection can be performed by 2 ways, constructor injection and Setter Injection. We inject dependency at constructor level in constructor injection. We use setter function to inject dependency in Setter Injection
 
+Spring container creates only one intance of bean by default and It will be cached in memory and being shared by all the request.We can define the scope to tell spring container how to create Bean. By default the scope will be Singletone, ie only once instance of the bean will be created. If the Scope is Prototype then spring container will create new instance of bean for each request. 
+
 
