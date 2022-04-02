@@ -26,4 +26,18 @@ First Spring Container instantiate the Bean, then dependencies will be injected 
 
 During the Bean initialization, you can add custom code based on your business logic or setting ups some resources like db etc. You can also add code during bean destruction to do some operation bases on your bussiness logic. 
 
+For "prototype" scoped beans, Spring does not call the destroy method.  In contrast to the other scopes, Spring does not manage the complete lifecycle of a prototype bean: the container instantiates, configures, and otherwise assembles a prototype object, and hands it to the client, with no further record of that prototype instance.
+
+Thus, although initialization lifecycle callback methods are called on all objects regardless of scope, in the case of prototypes, configured destruction lifecycle callbacks are not called. The client code must clean up prototype-scoped objects and release expensive resources that the prototype bean(s) are holding. This also applies to both XML configuration and Annotation-based configuration.
+
+### What are Java Annotation?
+
+Java Annotations are special Markers or lables to Java classes. It provides meta data about the classes. 
+
+#### @Component Annotation
+
+We will define Component-Scan Attribute with the base package name in Application Context file. Spring refers to all classes defined under the base package defined in the Component-Scan attribute. Whereever @Component Annotation is mentioned, Bean will be created by the spring container. 
+
+
+
 
