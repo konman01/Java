@@ -76,6 +76,14 @@ We can create threads in Java by 2 ways, by inheriting the Thread class and over
 
 If there are multiple threads executing on same resource, then it might corrupt the resource. To aviod this we can define a block or function as syncronized so that only once thread will be allowed at a time. When a thread start to execute the Syncronised block, then the block will be locked for other threads and will be released once the tread completes its execution.
 
+There are two types of thread synchronization mutual exclusive and inter-thread communication.
+
+* Mutual Exclusive
+	Synchronized method.
+	Synchronized block.
+	Static synchronization.
+* Cooperation (Inter-thread communication in java)
+
 If syncronised ketword is used for a method or a block, then it will be locked and executed by only one thread. Only when the thread compltes its execution, then only other thread can execute it.
 
 ### What is the difference between class level lock and object level lock?
@@ -241,6 +249,55 @@ Thread2:2
 Thread2:3
 Thread2:4
 ```
+
+### Priority of a Thread
+
+Each thread has a priority. Priorities are represented by a number between 1 and 10. In most cases, the thread scheduler schedules the threads according to their priority (known as preemptive scheduling).
+
+public final int getPriority(): The java.lang.Thread.getPriority() method returns the priority of the given thread.
+
+public final void setPriority(int newPriority): The java.lang.Thread.setPriority() method updates or assign the priority of the thread to newPriority. The method throws IllegalArgumentException if the value newPriority goes out of the range, which is 1 (minimum) to 10 (maximum).
+
+Default priority of a thread is 5 (Thread.NORM_PRIORITY). The value of Thread.MIN_PRIORITY is 1 and the value of Thread.MAX_PRIORITY is 10.
+
+### Daemon Thread in Java
+
+Daemon thread in Java is a service provider thread that provides services to the user thread. Its life depend on the mercy of user threads i.e. when all the user threads dies, JVM terminates this thread automatically.
+
+There are many java daemon threads running automatically e.g. gc, finalizer etc.
+
+```
+public class TestDaemonThread1 extends Thread{  
+
+ public void run(){  
+  if(Thread.currentThread().isDaemon()){//checking for daemon thread  
+   System.out.println("daemon thread work");  
+  }  
+  else{  
+  System.out.println("user thread work");  
+ }  
+ }  
+ 
+ public static void main(String[] args){  
+  TestDaemonThread1 t1=new TestDaemonThread1();//creating thread  
+  TestDaemonThread1 t2=new TestDaemonThread1();  
+  TestDaemonThread1 t3=new TestDaemonThread1();  
+  
+  t1.setDaemon(true);//now t1 is daemon thread  
+    
+  t1.start();//starting threads  
+  t2.start();  
+  t3.start();  
+ }  
+}  
+
+```
+
+### Java Thread Pool
+Java Thread pool represents a group of worker threads that are waiting for the job and reused many times.
+
+In the case of a thread pool, a group of fixed-size threads is created. A thread from the thread pool is pulled out and assigned a job by the service provider. After completion of the job, the thread is contained in the thread pool again.
+
 
 ### Points
 
