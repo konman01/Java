@@ -58,101 +58,6 @@ default toString() method provides memory address of the object. This method can
 
 ### Whar are the difference between Vector and ArrayList?
 
-### How to create thread in Java?
-We can create threads in Java by 2 mettods, by inheriting the Thread class and overriding the run() method, and by implementing Ruunable interface and providing implementation for run() method. We want to inherit other class, then we have to use the Runnable interface since Java does not support multiple inheritance.
-
-
-### What is Syncronization?
-
-If there are multiple threads executing on same resource, then it might corrupt the resource. To aviod this we can define a block or function as syncronized so that only once thread will be allowed at a time. When a thread start to execute the Syncronised block, then the block will be locked for other threads and will be released once the tread completes its execution.
-
-If syncronised ketword is used for a method or a block, then it will be locked and executed by only one thread. Only when the thread compltes its execution, then only other thread can execute it.
-
-### What is the difference between class level lock and object level lock?
-
-#### Object level lock
-
-Object level locking is mechanism when you want to synchronize a non-static method or non-static code block such that only one thread will be able to execute the code block on given instance of the class. This should always be done to make instance level data thread safe. This can be done as below :
-
-```
-public class DemoClass 
-{ 
-  public synchronized void demoMethod(){} 
-} 
-```
-or 
-
-```
-public class DemoClass 
-{ 
-  public void demoMethod(){ 
-  synchronized (this) 
-  { 
-   //other thread safe code 
-  } 
- } 
-} 
-
-```
-
-or 
-
-```
-public class DemoClass 
-{ 
-  private final Object lock = new Object(); 
-  public void demoMethod(){ 
-  synchronized (lock) 
- { 
-  //other thread safe code 
- } 
-} 
-
-```
-
-#### Class level lock
-
-Class level locking prevents multiple threads to enter in synchronized block in any of all available instances on runtime. This means if in runtime there are 100 instances of DemoClass, then only one thread will be able to execute demoMethod() in any one of instance at a time, and all other instances will be locked for other threads. This should always be done to make static data thread safe.
-
-```
-public class DemoClass 
-{ 
-  public synchronized static void demoMethod(){} 
-} 
-
-```
-or 
-
-```
-public class DemoClass 
-{ 
-  public void demoMethod(){ 
-  synchronized (DemoClass.class) 
-  { 
-   //other thread safe code 
-  } 
- } 
-} 
-
-```
-or 
-
-```
-public class DemoClass 
-{ 
- private final static Object lock = new Object(); 
- public void demoMethod(){ 
- synchronized (lock) 
-  { 
-   //other thread safe code 
-  } 
- } 
-}
-```
-
-### If a thread T1 enters a method m1 by obtaining the class level lock, does this mean another thread T2 cannot run a different method m2 by obtaining the object level lock?
-
-Object level lock and Class level locks are different. In above case, T2 can run method m2 by obtaining object level lock. But if m2 is static synchronized, T2 can't invoke m2 method unless T1 release class level lock on method m1.
 
 
 ### How threads communicates?
@@ -162,8 +67,6 @@ Thread communicates using wait() and notify() functions. wait() function release
 ### What are Java8 features?
 
 Lambda Expressions, Functional interface, default methods, functions, predicates and Stream Api
-
-
 
 
 ### What is Java Lambda Expression?
