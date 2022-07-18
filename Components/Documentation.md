@@ -59,6 +59,10 @@ default toString() method provides memory address of the object. This method can
 
 | Comparable | Comparator |
 |------------|------------|
+| Comparable provides only one sorting sequence, means we can sort elements based on only one class literals such as Id, name or age | Comparator provides multiple sorting sequence, that is we can sort the objects using combination of multiple sequence |
+| Comparable affects the actual class means on the class level we nedd to provide the implementation to Comparble Interface and override compareTo() method | Comparator does not modify the original class |
+| Collection.sort() sort the list of objects of class which implements the compareTo() method | Collections.sort(list, Comparator) sort the elements |
+
 
 Read more: https://javarevisited.blogspot.com/2011/12/final-variable-method-class-java.html#ixzz7ZMlnulzR
 
