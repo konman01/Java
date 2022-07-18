@@ -66,7 +66,8 @@ Inheritance is a mechanism where one class inherits the properties of another cl
 * Subclass can inherit only non static members of a superclass or base class.
 * Whenever we create instance of a subclass, we will always have properties of subclass and super class.
 * Inheritace is used to achive generalization
-* If a class is declared as Final, then it cannot have a subclass. A final class can be a subclass and we can create instance of final class.
+* If a class is declared as Final, then it cannot have a subclass. A final class can be a subclass and we can create instance of final class. Object of final can be safely shared in between multiple threads without any synchronization overhead. String is a final immutable class.
+
 * If a superclass have non static members having the access specifier as Private, then it cannot be inherited to subclass.
 * Each and every class defined in Java language must have a superclass. If there is no superclass defined by the user, then the compiler define Object class as its super class. 
 
