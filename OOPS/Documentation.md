@@ -38,7 +38,8 @@ Defining multiple constructors in a class with different parameters is known as 
 
 #### Points
 * The Constructor name should be same as the class name, and should not have any return type
-* Constructors of a class are never inherited and therefore are not subject to hiding or overriding. So constructors cannot be declared as Final and Abstarct
+* Constructors of a class are never inherited and therefore are not subject to hiding or overriding. So constructors cannot be declared as Abstarct
+* The child class inherits all the members of the superclass except the constructors. In other words, constructors cannot be inherited in Java therefore you cannot override constructors. So, writing final before constructors makes no sense. Therefore, java does not allow final keyword before a constructor.
 * When you set a member as static it means: "This method belongs to the class, not to a particular object." But a constructor is implicitly called to initialize  data members of a class(static blocks cannot use non static members), so we cannot declare constructors as Static members.
 * When you set a method as abstract it means: "This method doesn't have a body and it should be implemented in a child class." But the constructor is called implicitly for instance initialization when the new keyword is used so it can't lack a body. So Constructors cannot be declared as Abstarct
 
