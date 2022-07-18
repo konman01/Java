@@ -56,6 +56,12 @@ default toString() method provides memory address of the object. This method can
 
 ### What are the difference between Comparator and Comparable?
 
+
+| Comparable | Comparator |
+|------------|------------|
+
+Read more: https://javarevisited.blogspot.com/2011/12/final-variable-method-class-java.html#ixzz7ZMlnulzR
+
 ### Whar are the difference between Vector and ArrayList?
 
 
